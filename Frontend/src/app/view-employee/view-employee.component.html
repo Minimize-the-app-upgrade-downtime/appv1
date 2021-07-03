@@ -1,0 +1,30 @@
+<br><br>
+
+<table id="style">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Employee Number</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">offfice Name</th>
+        <th scope="col">Email</th>
+        <th scope="col"> Job </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let es of employee; let i = index">
+            <td scope="row" >{{i+1}}</td>
+            <td>{{es.employeeNumber}}</td>
+            <td>{{es.firstName}}</td>
+            <td>{{es.lastName}}</td>
+            <td>{{es.officeName}}</td>
+            <td>{{es.email}}</td>
+            <td>{{es.jobTitle}}</td>
+        </tr>
+    </tbody>
+
+    <tbody>
+      
+    </tbody>
+  </table>

@@ -1,0 +1,34 @@
+<br><br>
+
+<table id="officestyle">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Office Code</th>
+        <th scope="col">Office Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Address Line 1</th>
+        <th scope="col">Address Line 2</th>
+        <th scope="col"> Street </th>
+        <th scope="col"> Conuntry</th>
+        <th scope="col"> Postal Code</th>
+      </tr>
+    </thead>
+    
+    <tbody >
+        <tr *ngFor = "let os of office; let i = index">
+          <td scope="row" >{{i+1}}</td>
+          <td>{{os.officeCode}}</td>
+          <td>{{os.officeName}}</td>
+          <td>{{os.city}}</td>
+          <td>{{os.phone}}</td>
+          <td>{{os.addressLine1}}</td>
+          <td>{{os.addressLine2}}</td>
+          <td>{{os.street}}</td>
+          <td>{{os.country}}</td>
+          <td>{{os.postalCode}}</td>
+      </tr> 
+    </tbody>
+  </table>
+

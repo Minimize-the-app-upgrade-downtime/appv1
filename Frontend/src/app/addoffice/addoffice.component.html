@@ -1,0 +1,99 @@
+<form [formGroup]="office" validate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title> Add Office </mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="officeCode" formControlName="officeCode">
+            <mat-error *ngIf="office.controls['officeCode'].hasError('required')">
+              Office Code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Office Name" formControlName="officeName">
+            <mat-error *ngIf="office.controls['officeName'].hasError('required')">
+              Office name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+       
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #phonenumber maxlength="10" minlength="10"  placeholder="Phone Number" type="number" formControlName="phonenumber">
+            <mat-hint align="end">{{phonenumber.value.length}} / 10</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="address Line1" formControlName="addressLine1"></textarea>
+            <mat-error *ngIf="office.controls['addressLine1'].hasError('required')">
+              Address Line1 is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="address Line2" formControlName="addressLine2"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Street" formControlName="street"> 
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="City" formControlName="city">
+            <mat-error *ngIf="office.controls['city'].hasError('required')">
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Country" formControlName="country">
+            <mat-error *ngIf="office.controls['country'].hasError('required')">
+              country is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #postalcode placeholder="Postal Code"  formControlName="postalcode">
+            <mat-hint align="end">{{postalcode.value.length}} / 5</mat-hint>
+            <mat-error *ngIf="office.controls['postalcode'].hasError('required')">
+              Postal Code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
